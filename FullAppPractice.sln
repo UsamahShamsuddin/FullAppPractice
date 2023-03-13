@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAPDataManager", "FAPDataMa
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FAPData", "FAPData\FAPData.sqlproj", "{33011333-E79A-4DD9-9BAF-1DB59BA4F939}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAPDesktopUI", "FAPDesktopUI\FAPDesktopUI.csproj", "{27396AE9-0F2F-4046-8445-9B49E7319236}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{33011333-E79A-4DD9-9BAF-1DB59BA4F939}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33011333-E79A-4DD9-9BAF-1DB59BA4F939}.Release|Any CPU.Build.0 = Release|Any CPU
 		{33011333-E79A-4DD9-9BAF-1DB59BA4F939}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{27396AE9-0F2F-4046-8445-9B49E7319236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27396AE9-0F2F-4046-8445-9B49E7319236}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27396AE9-0F2F-4046-8445-9B49E7319236}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27396AE9-0F2F-4046-8445-9B49E7319236}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
