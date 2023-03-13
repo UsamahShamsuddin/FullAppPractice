@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="7769584f-11c3-438b-a814-a7400aa7ce0d" ChangeDateTime="03/13/2023 13:16:28">
+    <Property Name="ElementName" Value="[dbo].[Projects].[CreatedBy]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Projects]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CreatedById" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="31138f51-4e6a-4367-afe4-69cf4f8a5410" ChangeDateTime="03/13/2023 13:17:14">
+    <Property Name="ElementName" Value="[dbo].[Projects].[Creaad]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Projects]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CreatedDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="88534d72-655c-423b-8cb1-d0bb47783f7f" ChangeDateTime="03/13/2023 13:20:26">
+    <Property Name="ElementName" Value="[dbo].[Bugs].[D]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Bugs]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Description" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9b69c5a9-1d3e-4c8d-b313-6efb193a9356" ChangeDateTime="03/13/2023 13:23:20">
+    <Property Name="ElementName" Value="[dbo].[Bugs].[C]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Bugs]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Comments" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="aa58a87b-e385-47ce-88da-d886ef9a8779" ChangeDateTime="03/13/2023 13:29:56">
+    <Property Name="ElementName" Value="[dbo].[Bugs].[Severity]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Bugs]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Priority" />
+  </Operation>
+</Operations>
