@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using FAPDesktopUI.Helpers;
 using FAPDesktopUI.ViewModels;
 using FAPDesktopUI.Views;
 using System;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace FAPDesktopUI
 {
@@ -16,6 +18,11 @@ namespace FAPDesktopUI
         public Bootstrapper()
         {
             Initialize();
+
+            ConventionManager.AddElementConvention<PasswordBox>(
+            PasswordBoxHelper.BoundPasswordProperty,
+            "Password",
+            "PasswordChanged");
         }
 
         protected override void Configure()
@@ -23,7 +30,7 @@ namespace FAPDesktopUI
             _container.Instance(_container);
 
             _container
-                .Singleton<IWindowManager,  WindowManager>()
+                .Singleton<IWindowManager, WindowManager>()
                 .Singleton<IEventAggregator, EventAggregator>();
 
             GetType().Assembly.GetTypes()
