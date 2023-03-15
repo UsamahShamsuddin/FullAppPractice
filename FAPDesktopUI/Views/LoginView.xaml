@@ -22,21 +22,21 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.Column="1" FontSize="34" Margin="0 50 0 30">Login to Bug Tracker</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="1" FontSize="34" Margin="0 50 0 30">Login to Application</TextBlock>
 
-        <TextBlock Grid.Row="1" Grid.Column="1" TextAlignment="Center" Margin="0 0 0 20">Please enter your email and password</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="1" TextAlignment="Center" Margin="0 0 0 20">Please enter your username and password</TextBlock>
 
         <Border Grid.Row="2" Grid.Column="1" BorderThickness="1" BorderBrush="#acb0af" CornerRadius="5">
             <Grid>
-                <TextBlock x:Name="TextBlockEmail" MouseDown="TextBlockEmail_MouseDown" Panel.ZIndex="1" Foreground="#ACB0AF" Margin="10 0 0 0">Email</TextBlock>
-                <TextBox x:Name="TextBoxEmail" TextChanged="TextBoxEmail_TextChanged"></TextBox>
+                <TextBlock x:Name="TextBlockUserName" MouseDown="TextBlockUserName_MouseDown" Panel.ZIndex="1" Foreground="#ACB0AF" Margin="10 0 0 0">Username</TextBlock>
+                <TextBox x:Name="UserName" TextChanged="UserName_TextChanged"></TextBox>
             </Grid>
         </Border>
 
         <Border Grid.Row="3" Grid.Column="1" BorderThickness="1" BorderBrush="#acb0af" CornerRadius="5" Margin="0 5 0 10">
             <Grid>
                 <TextBlock x:Name="TextBlockPassword" MouseDown="TextBlockPassword_MouseDown" Panel.ZIndex="1" Foreground="#ACB0AF" Margin="10 0 0 0">Password</TextBlock>
-                <PasswordBox x:Name="TextPassword" PasswordChanged="TextPassword_PasswordChanged"></PasswordBox>
+                <PasswordBox x:Name="Password" PasswordChanged="Password_PasswordChanged"></PasswordBox>
             </Grid>
         </Border>
 

@@ -25,31 +25,31 @@ namespace FAPDesktopUI.Views
             InitializeComponent();
         }
 
-        private void TextBlockEmail_MouseDown(object sender, MouseButtonEventArgs e)
+        private void TextBlockUserName_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            TextBoxEmail.Focus();
+            UserName.Focus();
         }
 
-        private void TextBoxEmail_TextChanged(object sender, TextChangedEventArgs e)
+        private void UserName_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(TextBoxEmail.Text) && TextBoxEmail.Text.Length > 0)
+            if (!string.IsNullOrEmpty(UserName.Text) && UserName.Text.Length > 0)
             {
-                TextBlockEmail.Visibility = Visibility.Collapsed;
+                TextBlockUserName.Visibility = Visibility.Collapsed;
             }
             else
             {
-                TextBlockEmail.Visibility = Visibility.Visible;
+                TextBlockUserName.Visibility = Visibility.Visible;
             }
         }
 
         private void TextBlockPassword_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            TextPassword.Focus();
+            Password.Focus();
         }
 
-        private void TextPassword_PasswordChanged(object sender, RoutedEventArgs e)
+        private void Password_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(TextPassword.Password) && TextPassword.Password.Length > 0)
+            if (!string.IsNullOrEmpty(Password.Password) && Password.Password.Length > 0)
             {
                 TextBlockPassword.Visibility = Visibility.Collapsed;
             }

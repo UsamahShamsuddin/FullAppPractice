@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using FAPDesktopUI.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,28 +10,33 @@ namespace FAPDesktopUI.ViewModels
 {
     public class LoginViewModel : Screen
     {
-        private string _textBoxEmail;
+        private string _userName;
+        private string _password;
+        private IAPIHelper _apiHelper;
 
-        public string TextBoxEmail
+        public LoginViewModel(IAPIHelper apiHelper)
         {
-            get { return _textBoxEmail; }
-            set
-            {
-                _textBoxEmail = value;
-                NotifyOfPropertyChange(() => TextBoxEmail);
-                NotifyOfPropertyChange(() => CanLogIn);
-            }
+            _apiHelper = apiHelper;
         }
 
-        private string _password;
+        public string UserName
+        {
+            get { return _userName; }
+            set
+            {
+                _userName = value;
+                NotifyOfPropertyChange(() => UserName);
+                NotifyOfPropertyChange(() => CanLogIn);
+            }
+        }        
 
-        public string TextPassword
+        public string Password
         {
             get { return _password; }
             set 
             {
                 _password = value;
-                NotifyOfPropertyChange(() => TextPassword);
+                NotifyOfPropertyChange(() => Password);
                 NotifyOfPropertyChange(() => CanLogIn);
             }
         }
@@ -41,7 +47,7 @@ namespace FAPDesktopUI.ViewModels
             {
                 bool output = false;
 
-                if (TextBoxEmail?.Length > 0 && TextPassword?.Length > 0)
+                if (UserName?.Length > 0 && Password?.Length > 0)
                 {
                     output = true;
                 }
@@ -51,9 +57,16 @@ namespace FAPDesktopUI.ViewModels
         }
 
 
-        public void LogIn()
+        public async Task LogIn()
         {
-            
+            try
+            {
+                var result = await _apiHelper.Authenticate(UserName, Password);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
