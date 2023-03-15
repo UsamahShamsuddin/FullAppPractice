@@ -19,6 +19,7 @@
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
@@ -26,21 +27,23 @@
 
         <TextBlock Grid.Row="1" Grid.Column="1" TextAlignment="Center" Margin="0 0 0 20">Please enter your username and password</TextBlock>
 
-        <Border Grid.Row="2" Grid.Column="1" BorderThickness="1" BorderBrush="#acb0af" CornerRadius="5">
+        <TextBlock x:Name="ErrorMessage" Visibility="{Binding IsErrorVisible, Converter={StaticResource BooleanToVisibilityConverter}, FallbackValue=Collapsed}" Grid.Row="2" Grid.Column="1" Margin="0 0 0 20" Foreground="Red" TextAlignment="Center" MaxWidth="300" TextWrapping="Wrap"></TextBlock>
+
+        <Border Grid.Row="3" Grid.Column="1" BorderThickness="1" BorderBrush="#acb0af" CornerRadius="5">
             <Grid>
                 <TextBlock x:Name="TextBlockUserName" MouseDown="TextBlockUserName_MouseDown" Panel.ZIndex="1" Foreground="#ACB0AF" Margin="10 0 0 0">Username</TextBlock>
                 <TextBox x:Name="UserName" TextChanged="UserName_TextChanged"></TextBox>
             </Grid>
         </Border>
 
-        <Border Grid.Row="3" Grid.Column="1" BorderThickness="1" BorderBrush="#acb0af" CornerRadius="5" Margin="0 5 0 10">
+        <Border Grid.Row="4" Grid.Column="1" BorderThickness="1" BorderBrush="#acb0af" CornerRadius="5" Margin="0 5 0 10">
             <Grid>
                 <TextBlock x:Name="TextBlockPassword" MouseDown="TextBlockPassword_MouseDown" Panel.ZIndex="1" Foreground="#ACB0AF" Margin="10 0 0 0">Password</TextBlock>
                 <PasswordBox x:Name="Password" PasswordChanged="Password_PasswordChanged"></PasswordBox>
             </Grid>
         </Border>
 
-        <Button x:Name="LogIn" Content="Log in" Grid.Row="4" Grid.Column="1" Width="100" Padding="5">
+        <Button x:Name="LogIn" Content="Log in" Grid.Row="5" Grid.Column="1" Width="100" Padding="5">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"></Setter>
